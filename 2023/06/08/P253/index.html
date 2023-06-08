@@ -11,7 +11,7 @@
   
   <title>
     
-      Archives 
+      JZ52 两个链表的第一个公共结点P253💚× 
       
       
       |
@@ -106,68 +106,153 @@
 
 
       <div class="flex-container">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2023</span>
-          </h2>
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">JZ52 两个链表的第一个公共结点P253💚×</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+          2023-06-08 19:47:38
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E5%89%91%E6%8C%87offer/" title="剑指offer">
+                    #剑指offer
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>输入两个无环的单向链表，找出它们的第一个公共结点，如果没有公共节点则返回空。（注意因为传入数据是链表，所以错误测试数据的提示是用其他方式显示的，保证传入数据是正确的）</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><ul>
+<li>功能测试(输入的两个链表有公共节点)：<ul>
+<li>第一个公共节点在链表的中间，</li>
+<li>第一个公共节点在链表的末尾，</li>
+<li>第一个公共节点是链表的头节点;</li>
+<li>输入的两个链表没有公共节点。</li>
+</ul>
+</li>
+<li>特殊输入测试(输入的链表头节点是 nullptr 指针)。</li>
+</ul>
+<p>剑指上的解法太烂了！！</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"># 自己debug了好久，是自己想复杂了</span><br><span class="line">if(pHead1==nullptr||pHead2==nullptr)return nullptr;</span><br><span class="line">		ListNode* p=pHead1;</span><br><span class="line">		ListNode* q=pHead2;</span><br><span class="line">		int flag1=0;</span><br><span class="line">		int flag2=0;</span><br><span class="line">		while(p!=q)&#123;</span><br><span class="line">			if(p==nullptr)p=pHead2;</span><br><span class="line">			else p=p-&gt;next;</span><br><span class="line">			if(q==nullptr)q=pHead1;</span><br><span class="line">			else q=q-&gt;next;</span><br><span class="line">	</span><br><span class="line">	</span><br><span class="line">		&#125;</span><br><span class="line">		return p;</span><br></pre></td></tr></table></figure>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2023/06/08/P145/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>Prev</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+              2023-06-08 19:47:38
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E5%89%91%E6%8C%87offer/" title="剑指offer">
+                        #剑指offer
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
         </div>
       
-      <div class="post-item" title="JZ52 两个链表的第一个公共结点P253💚×">
-        <div class="time-m-d">06-08</div>
-        <div class="title">
-          <a href="/2023/06/08/P253/">
-            <span>JZ52 两个链表的第一个公共结点P253💚×</span>
-          </a>
-        </div>
-      </div>
+    </div>
     
-      <div class="post-item" title="JZ25 合并两个排序的链表P145💚">
-        <div class="time-m-d">06-08</div>
-        <div class="title">
-          <a href="/2023/06/08/P145/">
-            <span>JZ25 合并两个排序的链表P145💚</span>
-          </a>
-        </div>
-      </div>
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">Contents</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0"><span class="toc-text">描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
     
-      <div class="post-item" title="JZ24 反转链表P142💚×">
-        <div class="time-m-d">06-08</div>
-        <div class="title">
-          <a href="/2023/06/08/P142/">
-            <span>JZ24 反转链表P142💚×</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="JZ6 从尾到头打印链表P58💚">
-        <div class="time-m-d">06-08</div>
-        <div class="title">
-          <a href="/2023/06/08/P58/">
-            <span>JZ6 从尾到头打印链表P58💚</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Hello My Blog⏲花费时长2h+">
-        <div class="time-m-d">06-08</div>
-        <div class="title">
-          <a href="/2023/06/08/First-Blog/">
-            <span>Hello My Blog⏲花费时长2h+</span>
-          </a>
-        </div>
+      <div class="comments-container">
+        
+
+
+
+
+
+
+
       </div>
     
   </div>
-</div>
+
 
         
 <div class="footer">
@@ -422,6 +507,24 @@
 
 
         
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + JZ52%20%E4%B8%A4%E4%B8%AA%E9%93%BE%E8%A1%A8%E7%9A%84%E7%AC%AC%E4%B8%80%E4%B8%AA%E5%85%AC%E5%85%B1%E7%BB%93%E7%82%B9P253%F0%9F%92%9A%C3%97 + '&url=' + http%3A%2F%2Fexample.com%2F2023%2F06%2F08%2FP253%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2023/06/08/P253/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
   
   
 <script src="/js/shares.js"></script>
