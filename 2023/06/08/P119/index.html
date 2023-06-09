@@ -155,7 +155,7 @@
       <div class="post-attach">
         <span class="post-pubtime">
           <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-          2023-06-08 22:10:33
+          2023-06-08 22:14:15
         </span>
         
               <span class="post-tags">
@@ -176,7 +176,7 @@
 <p>2.题目保证链表中节点的值互不相同</p>
 <h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>这题和剑指书上的不一样</p>
 <p>剑指书上更有学习意义</p>
-<p>接下来我们分析这种思路的时间复杂度。对于 n-1 个非尾节点而言，我们可以在 O(1)时间内把下一个节点的内存复制覆盖要删除的节点，并删除下一个节点;对于尾节点而言，由于仍然需要顺序查找，时间复杂度是O(n)。**因此，总的平均时间复杂度是[(n-1)*O(1)+O(n)]&#x2F;n，结果还是 O(1)<strong>，符合面试官的要求。<br>值得注意的是，上述代码仍然不是完美的代码，因为它基于一个假设：要删除的节点的确在链表中。我们需要 O(n)的时间才能判断链表中是否包含某一节点。受到 O(1)时间的限制，我们不得不把确保节点在链表中的责任推给了函数 DeleteNode 的调用者。</strong>在面试的时候，我们可以和面试官讨论这个假设，这样面试官就会觉得我们考虑问题非常全面。**</p>
+<p>接下来我们分析这种思路的时间复杂度。对于 n-1 个非尾节点而言，我们可以在 O(1)时间内把下一个节点的内存复制覆盖要删除的节点，并删除下一个节点;对于尾节点而言，由于仍然需要顺序查找，时间复杂度是O(n)。<strong>因此，总的平均时间复杂度是[(n-1)xO(1)+O(n)]&#x2F;n，结果还是 O(1)<strong>，符合面试官的要求。<br>值得注意的是，上述代码仍然不是完美的代码，因为它基于一个假设：要删除的节点的确在链表中。我们需要 O(n)的时间才能判断链表中是否包含某一节点。受到 O(1)时间的限制，我们不得不把确保节点在链表中的责任推给了函数 DeleteNode 的调用者。</strong>在面试的时候，我们可以和面试官讨论这个假设，这样面试官就会觉得我们考虑问题非常全面。</strong></p>
 
       </div>
       
@@ -192,7 +192,7 @@
           <div class="post-attach">
             <span class="post-pubtime">
               <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
-              2023-06-08 22:10:33
+              2023-06-08 22:14:15
             </span>
             
                   <span class="post-tags">
@@ -208,6 +208,11 @@
               
           </div>
           <div class="post-foot-prev">
+            
+              <a href="/2023/06/09/P271/" target="_self">
+                <span>Next</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
             
           </div>
         </div>

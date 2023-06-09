@@ -11,7 +11,7 @@
   
   <title>
     
-      archive_a: 2023/6 
+      JZ34 二叉树中和为某一值的路径(二)P182💛 
       
       
       |
@@ -106,140 +106,147 @@
 
 
       <div class="flex-container">
-        <!-- 归档页，展示本站所有文章，按照年份降序归类，url形式：https://yoursite/archives/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<!-- last: 按年份把文章分组，当前遍历到的年份 -->
-<!-- now: 当前遍历到的文章的发布年份 -->
 
-<div class="container archives">
-  <div class="post-list">
-    
-        <!-- 后续文章的发布年份呈现 -->
-        <div class="content-title">
-          <h2>
-            <span>2023</span>
-          </h2>
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">JZ34 二叉树中和为某一值的路径(二)P182💛</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+          2023-06-09 15:12:18
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E5%89%91%E6%8C%87offer/" title="剑指offer">
+                    #剑指offer
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>输入一颗二叉树的根节点root和一个整数expectNumber，找出二叉树中结点值的和为expectNumber的所有路径。1.该题路径定义为从树的根结点开始往下一直到叶子结点所经过的结点</p>
+<p>2.叶子节点是指没有子节点的节点</p>
+<p>3.路径只能从父节点到子节点，不能从子节点到父节点</p>
+<p>4.总节点数目为n</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p><strong>由于路径是从根节点出发到叶节点</strong>，也就是说路径总是以根节点为起始点，<strong>因此我们首先需要遍历根节点。</strong>在树的前序、中序、后序 3 种遍历方式中，<strong>只有前序遍历是首先访问根节点的。</strong></p>
+<p>在遍历这个节点之前，需要先经过节点5回到节点 10。同样，<strong>每次当从子节点回到父节点的时候，我们都需要在路径上删除子节点。</strong>最后在从节点 10 到达节点 12 的时候，路径上的两个节点的值之和也是22，因此，这也是一条符合要求的路径。</p>
+<p>分析完前面具体的例子之后，我们就找到了一些规律。<strong>当用前序遍历的方式访问到某一节点时，我们把该节点添加到路径上，并累加该节点的值。如果该节点为叶节点，并且路径中节点值的和刚好等于输入的整数，则当前路径符合要求，我们把它打印出来。如果当前节点不是叶节点，则继续访问它的子节点。当前节点访问结束后，递归函数将自动回到它的父节点。因此，我们在函数退出之前要在路径上删除当前节点并减去当前节点的值，以确保返回父节点时路径刚好是从根节点到父节点。</strong>我们不难看出保存路径的数据结构实际上是一个栈，因为路径要与递归调用状态致，而递归调用的本质就是一个压栈和出栈的过程。</p>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2023/06/09/P273/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>Prev</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+              2023-06-09 15:12:18
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E5%89%91%E6%8C%87offer/" title="剑指offer">
+                        #剑指offer
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
         </div>
       
-      <div class="post-item" title="JZ34 二叉树中和为某一值的路径(二)P182💛">
-        <div class="time-m-d">06-09</div>
-        <div class="title">
-          <a href="/2023/06/09/P182/">
-            <span>JZ34 二叉树中和为某一值的路径(二)P182💛</span>
-          </a>
-        </div>
-      </div>
+    </div>
     
-      <div class="post-item" title="JZ79 判断是不是平衡二叉树P273💚×">
-        <div class="time-m-d">06-09</div>
-        <div class="title">
-          <a href="/2023/06/09/P273/">
-            <span>JZ79 判断是不是平衡二叉树P273💚×</span>
-          </a>
-        </div>
-      </div>
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">Contents</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0"><span class="toc-text">描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
+      
+    </div>
+  </div>
+
+  
+<script src="/js/catalog.js"></script>
+
+
+
+
     
-      <div class="post-item" title="JZ55 二叉树的深度P271💚">
-        <div class="time-m-d">06-09</div>
-        <div class="title">
-          <a href="/2023/06/09/P271/">
-            <span>JZ55 二叉树的深度P271💚</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="JZ18 删除链表的节点P119💚">
-        <div class="time-m-d">06-08</div>
-        <div class="title">
-          <a href="/2023/06/08/P119/">
-            <span>JZ18 删除链表的节点P119💚</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="JZ76 删除链表中重复的结点💛×">
-        <div class="time-m-d">06-08</div>
-        <div class="title">
-          <a href="/2023/06/08/JZ76/">
-            <span>JZ76 删除链表中重复的结点💛×</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="JZ35 复杂链表的复制P187❤×">
-        <div class="time-m-d">06-08</div>
-        <div class="title">
-          <a href="/2023/06/08/P187/">
-            <span>JZ35 复杂链表的复制P187❤×</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="JZ22 链表中倒数最后k个结点P135💚">
-        <div class="time-m-d">06-08</div>
-        <div class="title">
-          <a href="/2023/06/08/P135/">
-            <span>JZ22 链表中倒数最后k个结点P135💚</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="JZ23 链表中环的入口结点P139💛">
-        <div class="time-m-d">06-08</div>
-        <div class="title">
-          <a href="/2023/06/08/P139/">
-            <span>JZ23 链表中环的入口结点P139💛</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="JZ52 两个链表的第一个公共结点P253💚×">
-        <div class="time-m-d">06-08</div>
-        <div class="title">
-          <a href="/2023/06/08/P253/">
-            <span>JZ52 两个链表的第一个公共结点P253💚×</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="JZ25 合并两个排序的链表P145💚">
-        <div class="time-m-d">06-08</div>
-        <div class="title">
-          <a href="/2023/06/08/P145/">
-            <span>JZ25 合并两个排序的链表P145💚</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="JZ24 反转链表P142💚×">
-        <div class="time-m-d">06-08</div>
-        <div class="title">
-          <a href="/2023/06/08/P142/">
-            <span>JZ24 反转链表P142💚×</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="JZ6 从尾到头打印链表P58💚">
-        <div class="time-m-d">06-08</div>
-        <div class="title">
-          <a href="/2023/06/08/P58/">
-            <span>JZ6 从尾到头打印链表P58💚</span>
-          </a>
-        </div>
-      </div>
-    
-      <div class="post-item" title="Hello My Blog⏲花费时长2h+">
-        <div class="time-m-d">06-08</div>
-        <div class="title">
-          <a href="/2023/06/08/First-Blog/">
-            <span>Hello My Blog⏲花费时长2h+</span>
-          </a>
-        </div>
+      <div class="comments-container">
+        
+
+
+
+
+
+
+
       </div>
     
   </div>
-</div>
+
 
         
 <div class="footer">
@@ -494,6 +501,24 @@
 
 
         
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + JZ34%20%E4%BA%8C%E5%8F%89%E6%A0%91%E4%B8%AD%E5%92%8C%E4%B8%BA%E6%9F%90%E4%B8%80%E5%80%BC%E7%9A%84%E8%B7%AF%E5%BE%84(%E4%BA%8C)P182%F0%9F%92%9B + '&url=' + http%3A%2F%2Fexample.com%2F2023%2F06%2F09%2FP182%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2023/06/09/P182/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
   
   
 <script src="/js/shares.js"></script>
