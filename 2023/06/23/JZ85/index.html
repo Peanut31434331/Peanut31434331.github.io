@@ -11,8 +11,8 @@
   
   <title>
     
-      Tag 
-       : 剑指offer
+      JZ85 连续子数组的最大和(二)💛× 
+      
       
       |
     
@@ -106,115 +106,151 @@
 
 
       <div class="flex-container">
-        <!-- 标签详情页，展示某个标签下的文章列表，url形式：https://yoursite/tags/某个标签/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<div class="container tag-details">
-  <div class="content-title">
-    <h2>
-      <span>剑指offer</span>
-    </h2>
+
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">JZ85 连续子数组的最大和(二)💛×</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+          2023-06-23 08:53:37
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E5%89%91%E6%8C%87offer/" title="剑指offer">
+                    #剑指offer
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>输入一个长度为n的整型数组array，数组中的一个或连续多个整数组成一个子数组，找到一个具有最大和的连续子数组。</p>
+<p>1.子数组是连续的，比如[1,3,5,7,9]的子数组有[1,3]，[3,5,7]等等，但是[1,3,7]不是子数组</p>
+<p>2.如果存在多个最大和的连续子数组，那么返回其中长度最长的，该题数据保证这个最长的只存在一个</p>
+<p>3.该题定义的子数组的最小长度为1，不存在为空的子数组，即不存在[]是某个数组的子数组</p>
+<p>4.返回的数组不计入空间复杂度计算</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>感觉思路挺巧妙的，着实没想到</p>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2023/06/23/P218/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>Prev</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+              2023-06-23 08:53:37
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E5%89%91%E6%8C%87offer/" title="剑指offer">
+                        #剑指offer
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+              <a href="/2023/06/23/P74/" target="_self">
+                <span>Next</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
   </div>
-  
-    <div class="post-list">
-      <div class="post-item" title="JZ53 数字在升序数组中出现的次数P263💚">
-        <span class="time-m-d">2023-06-22</span>
-        <a href="/2023/06/22/P263/">
-          <span>JZ53 数字在升序数组中出现的次数P263💚</span>
-        </a>
-      </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">Contents</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0"><span class="toc-text">描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
+      
     </div>
+  </div>
+
   
-    <div class="post-list">
-      <div class="post-item" title="JZ59 滑动窗口的最大值P288💛×">
-        <span class="time-m-d">2023-06-22</span>
-        <a href="/2023/06/22/P288/">
-          <span>JZ59 滑动窗口的最大值P288💛×</span>
-        </a>
-      </div>
-    </div>
-  
-    <div class="post-list">
-      <div class="post-item" title="JZ58 翻转单词序列P284💚">
-        <span class="time-m-d">2023-06-22</span>
-        <a href="/2023/06/22/P284/">
-          <span>JZ58 翻转单词序列P284💚</span>
-        </a>
-      </div>
-    </div>
-  
-    <div class="post-list">
-      <div class="post-item" title="JZ31 栈的压入、弹出序列P168💛">
-        <span class="time-m-d">2023-06-22</span>
-        <a href="/2023/06/22/P168/">
-          <span>JZ31 栈的压入、弹出序列P168💛</span>
-        </a>
-      </div>
-    </div>
-  
-    <div class="post-list">
-      <div class="post-item" title="JZ30 包含min函数的栈P165💚">
-        <span class="time-m-d">2023-06-22</span>
-        <a href="/2023/06/22/P165/">
-          <span>JZ30 包含min函数的栈P165💚</span>
-        </a>
-      </div>
-    </div>
-  
-    <div class="post-list">
-      <div class="post-item" title="JZ9 用两个栈实现队列P68💚">
-        <span class="time-m-d">2023-06-22</span>
-        <a href="/2023/06/22/P68/">
-          <span>JZ9 用两个栈实现队列P68💚</span>
-        </a>
-      </div>
-    </div>
-  
-    <div class="post-list">
-      <div class="post-item" title="JZ84 二叉树中和为某一值的路径(三)💛×">
-        <span class="time-m-d">2023-06-21</span>
-        <a href="/2023/06/21/JZ84/">
-          <span>JZ84 二叉树中和为某一值的路径(三)💛×</span>
-        </a>
-      </div>
-    </div>
-  
-    <div class="post-list">
-      <div class="post-item" title="JZ86 在二叉树中找到两个节点的最近公共祖先💛×">
-        <span class="time-m-d">2023-06-21</span>
-        <a href="/2023/06/21/JZ86/">
-          <span>JZ86 在二叉树中找到两个节点的最近公共祖先💛×</span>
-        </a>
-      </div>
-    </div>
-  
-    <div class="post-list">
-      <div class="post-item" title="JZ68 二叉搜索树的最近公共祖先P327💚×">
-        <span class="time-m-d">2023-06-20</span>
-        <a href="/2023/06/20/P327/">
-          <span>JZ68 二叉搜索树的最近公共祖先P327💚×</span>
-        </a>
-      </div>
-    </div>
-  
-    <div class="post-list">
-      <div class="post-item" title="JZ37 序列化二叉树P194❤">
-        <span class="time-m-d">2023-06-20</span>
-        <a href="/2023/06/20/P194/">
-          <span>JZ37 序列化二叉树P194❤</span>
-        </a>
-      </div>
-    </div>
-  
-  <nav class="post-navigation">
+<script src="/js/catalog.js"></script>
+
+
+
+
     
-      <a href="/tags/%E5%89%91%E6%8C%87offer/"><i class="iconfont icon-angleleft"></i></a>
+      <div class="comments-container">
+        
+
+
+
+
+
+
+
+      </div>
     
-    <span class="page-num">2 / 5</span>
-    
-      <a href="/tags/%E5%89%91%E6%8C%87offer/page/3/"><i class="iconfont icon-angleright"></i></a>
-    
-  </nav>
-</div>
+  </div>
+
 
         
 <div class="footer">
@@ -469,6 +505,24 @@
 
 
         
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + JZ85%20%E8%BF%9E%E7%BB%AD%E5%AD%90%E6%95%B0%E7%BB%84%E7%9A%84%E6%9C%80%E5%A4%A7%E5%92%8C(%E4%BA%8C)%F0%9F%92%9B%C3%97 + '&url=' + http%3A%2F%2Fexample.com%2F2023%2F06%2F23%2FJZ85%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2023/06/23/JZ85/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
   
   
 <script src="/js/shares.js"></script>
