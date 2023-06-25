@@ -11,7 +11,7 @@
   
   <title>
     
-      Tag 
+      JZ39 数组中出现次数超过一半的数字P205💚× 
       
       
       |
@@ -140,21 +140,116 @@
 
 
 
-  <!-- 标签页 url形式：https://yoursite/tags/ -->
-  <div class="container tag-index">
-    <div>
-      <ul class="tag-list" itemprop="keywords"><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E5%89%91%E6%8C%87offer/" rel="tag">剑指offer</a><span class="tag-list-count">55</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E7%A2%8E%E7%A2%8E%E5%BF%B5/" rel="tag">碎碎念</a><span class="tag-list-count">2</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BA%E6%96%87/" rel="tag">论文</a><span class="tag-list-count">1</span></li><li class="tag-list-item"><a class="tag-list-link" href="/tags/%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/" rel="tag">设计模式</a><span class="tag-list-count">3</span></li></ul>
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">JZ39 数组中出现次数超过一半的数字P205💚×</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+          2023-06-25 22:14:06
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E5%89%91%E6%8C%87offer/" title="剑指offer">
+                    #剑指offer
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>给一个长度为 n 的数组，数组中有一个数字出现的次数超过数组长度的一半，请找出这个数字。</p>
+<p>例如输入一个长度为9的数组[1,2,3,2,2,2,5,4,2]。由于数字2在数组中出现了5次，超过数组长度的一半，因此输出2。</p>
+<h3 id="法一：基于partition函数【修改数组】"><a href="#法一：基于partition函数【修改数组】" class="headerlink" title="法一：基于partition函数【修改数组】"></a>法一：基于<a target="_blank" rel="noopener" href="https://blog.csdn.net/paoxungan5156/article/details/104566645">partition函数</a>【修改数组】</h3><figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="type">int</span> <span class="title">partition</span><span class="params">(vector&lt;<span class="type">int</span>&gt;&amp; nums,<span class="type">int</span> l,<span class="type">int</span> r)</span></span>&#123;</span><br><span class="line">	<span class="type">int</span> p=l+r&gt;&gt;<span class="number">1</span>;<span class="comment">//可随机取</span></span><br><span class="line">	<span class="built_in">swap</span>(nums[p],nums[r]);</span><br><span class="line"></span><br><span class="line">	<span class="type">int</span> small=l<span class="number">-1</span>;</span><br><span class="line">	<span class="keyword">for</span>(p=l;p&lt;r;p++)&#123;</span><br><span class="line">		<span class="keyword">if</span>(nums[p]&lt;num[r])&#123;</span><br><span class="line">			small++;</span><br><span class="line">			<span class="keyword">if</span>(p!=small)<span class="built_in">swap</span>(nums[small],nums[p]);</span><br><span class="line">		&#125;</span><br><span class="line">	&#125;</span><br><span class="line">	small++;</span><br><span class="line">	<span class="built_in">swap</span>(nums[small],nums[r]);</span><br><span class="line">	<span class="keyword">return</span> small;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果我们考虑到数组的特性：数组中有一个数字出现的次数超过了数组长度的一半。如果把这个数组『排序』，那么排序之后位于数组中间的数字一定就是那个出现次数超过数组长度一半的数字。也就是说，这个数字就是统计学上的『中位数』，即长度为n的数组中第n&#x2F;2大的数字。我们有成熟的O（n）的算法得到数组中任意第k大的数字。<br>在这一段很迷惑，是因为需要好好考虑下如何实现在 O(n) 的算法复杂度中找到任意第 k 大的数。『快速排序』第一趟排序之后，我们的到了一个中间索引（我们暂且称为 index），那么排在中间 index 前面的值都比 array[index] 小；同样的排序在中间 index 后面的元素都比 array[index] 大。第一趟的时间复杂度为O(n&#x2F;2)。排序完之后，我们获得了两个子序列，同样根据上述的逻辑进行排序，假设当 k &lt; index 时，那么我们就继续排序第二段比 index 小的部分。这一次的时间复杂度为O(n&#x2F;4)。以此类推，当我们把 index 定位到 k 的时候，我们就会清楚的知道，在 k 以前的数字都比 array[k] 的值小。这也就快速的找到了任意 k 大的数组，时间复杂度 O ( n ) ≈ O ( n &#x2F; 2 ) + O ( n &#x2F; 4 ) + O ( n &#x2F; 8 ) + ⋯ + O ( n &#x2F; 2^n )</p>
+<h3 id="法二：基于数组特点【不修改数组】"><a href="#法二：基于数组特点【不修改数组】" class="headerlink" title="法二：基于数组特点【不修改数组】"></a>法二：基于数组特点【不修改数组】</h3>
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2023/06/24/MySQL%E7%AC%94%E8%AE%B0/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>Prev</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+              2023-06-25 22:14:06
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E5%89%91%E6%8C%87offer/" title="剑指offer">
+                        #剑指offer
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+              <a href="/2023/06/25/P209/" target="_self">
+                <span>Next</span>
+                <i class="iconfont icon-chevronright"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
+  </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">Contents</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0"><span class="toc-text">描述</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%95%E4%B8%80%EF%BC%9A%E5%9F%BA%E4%BA%8Epartition%E5%87%BD%E6%95%B0%E3%80%90%E4%BF%AE%E6%94%B9%E6%95%B0%E7%BB%84%E3%80%91"><span class="toc-text">法一：基于partition函数【修改数组】</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#%E6%B3%95%E4%BA%8C%EF%BC%9A%E5%9F%BA%E4%BA%8E%E6%95%B0%E7%BB%84%E7%89%B9%E7%82%B9%E3%80%90%E4%B8%8D%E4%BF%AE%E6%94%B9%E6%95%B0%E7%BB%84%E3%80%91"><span class="toc-text">法二：基于数组特点【不修改数组】</span></a></li></ol></li></ol>
+      
     </div>
   </div>
-  
 
   
+<script src="/js/catalog.js"></script>
 
-  
 
-  
 
-  
+
+    
+      <div class="comments-container">
+        
+
+
+
+
+
+
+
+      </div>
+    
+  </div>
+
 
         
 <div class="footer">
@@ -416,12 +511,12 @@
       </a>
       <div class="share-content hidden">
         
-          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + tags + '&url=' + http%3A%2F%2Fexample.com%2Ftags%2Findex.html + '" target="_blank" title="Twitter">
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + JZ39%20%E6%95%B0%E7%BB%84%E4%B8%AD%E5%87%BA%E7%8E%B0%E6%AC%A1%E6%95%B0%E8%B6%85%E8%BF%87%E4%B8%80%E5%8D%8A%E7%9A%84%E6%95%B0%E5%AD%97P205%F0%9F%92%9A%C3%97 + '&url=' + http%3A%2F%2Fexample.com%2F2023%2F06%2F25%2FP205%2F + '" target="_blank" title="Twitter">
             <i class="iconfont icon-twitter"></i>
           </a>
         
         
-          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/tags/index.html" target="_blank" title="Facebook">
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2023/06/25/P205/" target="_blank" title="Facebook">
             <i class="iconfont icon-facebooksquare"></i>
           </a>
         
