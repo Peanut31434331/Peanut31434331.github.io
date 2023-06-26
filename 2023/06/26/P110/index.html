@@ -11,8 +11,8 @@
   
   <title>
     
-      Tag 
-       : 剑指offer
+      JZ16 数值的整数次方P110💛× 
+      
       
       |
     
@@ -106,115 +106,146 @@
 
 
       <div class="flex-container">
-        <!-- 标签详情页，展示某个标签下的文章列表，url形式：https://yoursite/tags/某个标签/ -->
+        <!-- 文章详情页，展示文章具体内容，url形式：https://yoursite/文章标题/ -->
+<!-- 同时为「标签tag」，「朋友friend」，「分类categories」，「关于about」页面的承载页面，具体展示取决于page.type -->
 
-<div class="container tag-details">
-  <div class="content-title">
-    <h2>
-      <span>剑指offer</span>
-    </h2>
+
+  <!-- LaTex Display -->
+
+  
+    <script async type="text/javascript" src="/plugins/mathjax/tex-chtml.js"></script>
+  
+  <script>
+    MathJax = {
+      tex: {
+        inlineMath: [['$', '$'], ['\\(', '\\)']]
+      }
+    }
+  </script>
+
+
+
+
+
+  <!-- clipboard -->
+
+  
+    <script async type="text/javascript" src="/plugins/clipboard.min.js"></script>
+  
+  
+<script src="/js/codeCopy.js"></script>
+
+
+
+
+
+
+
+  
+
+  
+
+  
+
+  
+  <!-- 文章内容页 url形式：https://yoursite/文章标题/ -->
+  <div class="container post-details" id="post-details">
+    <div class="post-content">
+      <div class="post-title">JZ16 数值的整数次方P110💛×</div>
+      <div class="post-attach">
+        <span class="post-pubtime">
+          <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+          2023-06-26 10:24:17
+        </span>
+        
+              <span class="post-tags">
+                <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                
+                <span class="span--tag mr-8">
+                  <a href="/tags/%E5%89%91%E6%8C%87offer/" title="剑指offer">
+                    #剑指offer
+                  </a>
+                </span>
+                
+              </span>
+          
+      </div>
+      <div class="markdown-body">
+        <h2 id="描述"><a href="#描述" class="headerlink" title="描述"></a>描述</h2><p>实现函数 double Power(double base, int exponent)，求base的exponent次方。</p>
+<p>注意：</p>
+<p>1.保证base和exponent不同时为0。</p>
+<p>2.不得使用库函数，同时不需要考虑大数问题</p>
+<p>3.有特殊判题，不用考虑小数点后面0的位数。</p>
+<h2 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h2><p>快速幂+注意指数可能为负数+两处小细节（base&#x3D;0?位运算代替&#x2F;2 取余）</p>
+
+      </div>
+      
+        <div class="prev-or-next">
+          <div class="post-foot-next">
+            
+              <a href="/2023/06/26/P100/" target="_self">
+                <i class="iconfont icon-chevronleft"></i>
+                <span>Prev</span>
+              </a>
+            
+          </div>
+          <div class="post-attach">
+            <span class="post-pubtime">
+              <i class="iconfont icon-updatetime mr-10" title="Update time"></i>
+              2023-06-26 10:24:17
+            </span>
+            
+                  <span class="post-tags">
+                    <i class="iconfont icon-tags mr-10" title="Tags"></i>
+                    
+                    <span class="span--tag mr-8">
+                      <a href="/tags/%E5%89%91%E6%8C%87offer/" title="剑指offer">
+                        #剑指offer
+                      </a>
+                    </span>
+                    
+                  </span>
+              
+          </div>
+          <div class="post-foot-prev">
+            
+          </div>
+        </div>
+      
+    </div>
+    
+  <div id="btn-catalog" class="btn-catalog">
+    <i class="iconfont icon-catalog"></i>
   </div>
-  
-    <div class="post-list">
-      <div class="post-item" title="JZ46 把数字翻译成字符串P231💛×">
-        <span class="time-m-d">2023-06-23</span>
-        <a href="/2023/06/23/P231/">
-          <span>JZ46 把数字翻译成字符串P231💛×</span>
-        </a>
-      </div>
+  <div class="post-catalog hidden" id="catalog">
+    <div class="title">Contents</div>
+    <div class="catalog-content">
+      
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%8F%8F%E8%BF%B0"><span class="toc-text">描述</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#%E6%80%BB%E7%BB%93"><span class="toc-text">总结</span></a></li></ol>
+      
     </div>
+  </div>
+
   
-    <div class="post-list">
-      <div class="post-item" title="JZ48 最长不含重复字符的子字符串P236💛×">
-        <span class="time-m-d">2023-06-23</span>
-        <a href="/2023/06/23/P236/">
-          <span>JZ48 最长不含重复字符的子字符串P236💛×</span>
-        </a>
-      </div>
-    </div>
-  
-    <div class="post-list">
-      <div class="post-item" title="JZ47 礼物的最大价值P233💛×">
-        <span class="time-m-d">2023-06-23</span>
-        <a href="/2023/06/23/P233/">
-          <span>JZ47 礼物的最大价值P233💛×</span>
-        </a>
-      </div>
-    </div>
-  
-    <div class="post-list">
-      <div class="post-item" title="JZ19 正则表达式匹配P124❤×">
-        <span class="time-m-d">2023-06-23</span>
-        <a href="/2023/06/23/P124/">
-          <span>JZ19 正则表达式匹配P124❤×</span>
-        </a>
-      </div>
-    </div>
-  
-    <div class="post-list">
-      <div class="post-item" title="JZ63 买卖股票的最好时机(一)P304💚">
-        <span class="time-m-d">2023-06-23</span>
-        <a href="/2023/06/23/P304/">
-          <span>JZ63 买卖股票的最好时机(一)P304💚</span>
-        </a>
-      </div>
-    </div>
-  
-    <div class="post-list">
-      <div class="post-item" title="JZ70 矩形覆盖P79💛">
-        <span class="time-m-d">2023-06-23</span>
-        <a href="/2023/06/23/P79/">
-          <span>JZ70 矩形覆盖P79💛</span>
-        </a>
-      </div>
-    </div>
-  
-    <div class="post-list">
-      <div class="post-item" title="JZ71 跳台阶扩展问题P78💚">
-        <span class="time-m-d">2023-06-23</span>
-        <a href="/2023/06/23/P78/">
-          <span>JZ71 跳台阶扩展问题P78💚</span>
-        </a>
-      </div>
-    </div>
-  
-    <div class="post-list">
-      <div class="post-item" title="JZ69 跳台阶P77💚">
-        <span class="time-m-d">2023-06-23</span>
-        <a href="/2023/06/23/P77/">
-          <span>JZ69 跳台阶P77💚</span>
-        </a>
-      </div>
-    </div>
-  
-    <div class="post-list">
-      <div class="post-item" title="JZ10 斐波那契数列P74💚">
-        <span class="time-m-d">2023-06-23</span>
-        <a href="/2023/06/23/P74/">
-          <span>JZ10 斐波那契数列P74💚</span>
-        </a>
-      </div>
-    </div>
-  
-    <div class="post-list">
-      <div class="post-item" title="JZ85 连续子数组的最大和(二)💛×">
-        <span class="time-m-d">2023-06-23</span>
-        <a href="/2023/06/23/JZ85/">
-          <span>JZ85 连续子数组的最大和(二)💛×</span>
-        </a>
-      </div>
-    </div>
-  
-  <nav class="post-navigation">
+<script src="/js/catalog.js"></script>
+
+
+
+
     
-      <a href="/tags/%E5%89%91%E6%8C%87offer/"><i class="iconfont icon-angleleft"></i></a>
+      <div class="comments-container">
+        
+
+
+
+
+
+
+
+      </div>
     
-    <span class="page-num">2 / 6</span>
-    
-      <a href="/tags/%E5%89%91%E6%8C%87offer/page/3/"><i class="iconfont icon-angleright"></i></a>
-    
-  </nav>
-</div>
+  </div>
+
 
         
 <div class="footer">
@@ -469,6 +500,24 @@
 
 
         
+  
+    <div class="share-icon tools-bar-item">
+      <a href="javascript: void(0)" id="share-icon">
+        <i class="iconfont iconshare"></i>
+      </a>
+      <div class="share-content hidden">
+        
+          <a class="share-item" href="https://twitter.com/intent/tweet?text=' + JZ16%20%E6%95%B0%E5%80%BC%E7%9A%84%E6%95%B4%E6%95%B0%E6%AC%A1%E6%96%B9P110%F0%9F%92%9B%C3%97 + '&url=' + http%3A%2F%2Fexample.com%2F2023%2F06%2F26%2FP110%2F + '" target="_blank" title="Twitter">
+            <i class="iconfont icon-twitter"></i>
+          </a>
+        
+        
+          <a class="share-item" href="https://www.facebook.com/sharer.php?u=http://example.com/2023/06/26/P110/" target="_blank" title="Facebook">
+            <i class="iconfont icon-facebooksquare"></i>
+          </a>
+        
+      </div>
+    </div>
   
   
 <script src="/js/shares.js"></script>
